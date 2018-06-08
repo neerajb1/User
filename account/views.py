@@ -1,3 +1,4 @@
+from django.shortcuts import HttpResponseRedirect
 from django.contrib.auth import (
     authenticate,
     get_user_model,
@@ -21,7 +22,7 @@ def register_view(request):
         user.save()
         new_user = authenticate(username=user.username, password=password)
         login(request, new_user)
-        return redirect("/")
+        return HttpResponseRedirect("User registered")
 
     context = {
         "form": form,
