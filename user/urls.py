@@ -16,12 +16,14 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from userlogin.views import LoginView , LogoutView
-from registration.views import RegisterView
+from account.views import register_view
+from userlogin.views import home
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
-    url(r'^registet/$', RegisterView.as_view(), name='register'),
+    url(r'^register/', register_view, name='logout'),
+    url(r'^$', register_view, name='home'),
 
 ]
