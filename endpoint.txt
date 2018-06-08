@@ -10,6 +10,9 @@ Userlogin:
 Account:
   Registration
 
+Locked Account:
+  axes_cache: Third party app to lock the user after 3 attempt
+
 geoip file Location and file name:
   https://dev.maxmind.com/geoip/geoip2/geolite2/
   GeoLite2-City.mmdb

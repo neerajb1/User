@@ -20,5 +20,4 @@ class LogoutView(DefaultLogoutView):
     pass
 
 
-def home(request):
-    return render(request, "home.html", {})
+# class UserDetailView()
