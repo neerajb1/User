@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
     url(r'^register/', register_view, name='logout'),
-    url(r'^$', register_view, name='home'),
+    url(r'^$', home, name='home'),
 
 ]
