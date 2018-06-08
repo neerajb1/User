@@ -1,0 +1,13 @@
+Analytic:
+  IP Address
+  City Location
+  Country Location
+
+Userlogin:
+  LoginView
+  LogoutView
+
+Account:
+  Registration
+
+Admin : http://127.0.0.1:8000/admin/
