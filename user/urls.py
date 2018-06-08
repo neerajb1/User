@@ -17,13 +17,14 @@ from django.conf.urls import url
 from django.contrib import admin
 from userlogin.views import LoginView , LogoutView
 from account.views import register_view
-from analytics.views import UserSessionDetailView
+from analytics.views import UserSessionDetailView , UserSessionList
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/$', LoginView.as_view(), name='login'),
     url(r'^logout/$', LogoutView.as_view(), name='logout'),
     url(r'^register/', register_view, name='logout'),
+    url(r'^$', UserSessionList.as_view(), name='userlist'),
     url(r'^(?P<pk>\d+)/$', UserSessionDetailView.as_view(), name='userdetail'),
 
 ]
