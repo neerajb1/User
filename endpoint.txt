@@ -10,4 +10,9 @@ Userlogin:
 Account:
   Registration
 
+geoip file Location and file name:
+  https://dev.maxmind.com/geoip/geoip2/geolite2/
+  GeoLite2-City.mmdb
+  GeoLite2-Country.mmdb
+
 Admin : http://127.0.0.1:8000/admin/
