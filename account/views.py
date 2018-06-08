@@ -8,9 +8,19 @@ from django.contrib.auth import (
     )
 from django.shortcuts import render
 
-from .forms import UserRegisterForm
+from .forms import UserRegisterForm , UserLoginForm
 
-
+def login_view(request):
+    print(request.user.is_authenticated())
+    title = "Login"
+    form = UserLoginForm(request.POST or None)
+    if form.is_valid():
+        username = form.cleaned_data.get("username")
+        password = form.cleaned_data.get('password')
+        user = authenticate(username=username, password=password)
+        login(request, user)
+        return HttpResponseRedirect("loggedin")
+    return render(request, "form.html", {"form":form, "title": title})
 
 def register_view(request):
     title = "Register"
